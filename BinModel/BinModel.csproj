@@ -56,14 +56,14 @@
     <Compile Include="src\TexBlock.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\EndianBinaryStreams.dll" />
-    <Content Include="lib\OpenTK.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\WCommon\WCommon.csproj">
       <Project>{e8af46cc-76dc-4541-a578-5067ead07087}</Project>
       <Name>WCommon</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\EndianBinaryStreams.dll" />
+    <Content Include="lib\OpenTK.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

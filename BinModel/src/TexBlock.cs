@@ -39,7 +39,7 @@ namespace BinModel.src
             GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, imageData.Width, imageData.Height, 0, PixelFormat.Bgra, PixelType.UnsignedByte, imageData.GetData());
 
             // Generate Mip Maps
-            if (imageData.MipMapCount > 0)
+            //if (imageData.MipMapCount > 0)
                 GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
         }
 

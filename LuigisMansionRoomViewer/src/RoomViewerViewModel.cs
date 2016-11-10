@@ -7,6 +7,9 @@ using LuigisMansionRoomViewer.src.ViewModel;
 using Microsoft.Win32;
 using BinModel.src;
 using System.IO;
+using System.Windows.Input;
+using System.Windows;
+using System.ComponentModel;
 
 namespace LuigisMansionRoomViewer.src
 {
@@ -17,6 +20,7 @@ namespace LuigisMansionRoomViewer.src
         public RoomViewerViewModel()
         {
             OpenModels = new List<Model>();
+            Application.Current.MainWindow.Closing += OnMainWindowClosing;
         }
 
         public override void Open()
@@ -43,5 +47,13 @@ namespace LuigisMansionRoomViewer.src
         {
             return new Model(fileName);
         }
+
+        #region Clean-up before closing
+        private void OnMainWindowClosing(object sender, CancelEventArgs e)
+        {
+            foreach (Model mod in OpenModels)
+                mod.Dispose();
+        }
+        #endregion
     }
 }
