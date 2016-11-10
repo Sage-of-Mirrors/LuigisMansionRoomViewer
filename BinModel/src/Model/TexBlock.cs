@@ -8,7 +8,7 @@ using OpenTK.Graphics.OpenGL;
 using JStudio.OpenGL;
 using WindEditor;
 
-namespace BinModel.src
+namespace BinModel.src.Model
 {
     public class Texture : IDisposable
     {

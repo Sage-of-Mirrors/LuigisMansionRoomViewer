@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using GameFormatReader.Common;
 using System.IO;
 
-namespace BinModel.src
+namespace BinModel.src.Model
 {
     public class Model : IDisposable
     {
@@ -15,6 +15,7 @@ namespace BinModel.src
 
         public TexBlock Textures;
         public VertexAttribBlock VertexData;
+        public MaterialBlock MaterialData;
 
         /// <summary>
         /// Loads a .bin model from file.

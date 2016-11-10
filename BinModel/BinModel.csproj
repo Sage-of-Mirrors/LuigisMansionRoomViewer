@@ -50,11 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\BinaryTextureImage.cs" />
-    <Compile Include="src\BinModel.cs" />
+    <Compile Include="src\Model\Material.cs" />
+    <Compile Include="src\Model\MaterialBlock.cs" />
+    <Compile Include="src\Model\Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\GXToOpenGL.cs" />
-    <Compile Include="src\TexBlock.cs" />
-    <Compile Include="src\VertexAttribBlock.cs" />
+    <Compile Include="src\Model\TexBlock.cs" />
+    <Compile Include="src\Model\VertexAttribBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WCommon\WCommon.csproj">

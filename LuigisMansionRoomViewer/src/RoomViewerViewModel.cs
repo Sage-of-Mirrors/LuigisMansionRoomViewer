@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LuigisMansionRoomViewer.src.ViewModel;
 using Microsoft.Win32;
-using BinModel.src;
+using BinModel.src.Model;
 using System.IO;
 using System.Windows.Input;
 using System.Windows;

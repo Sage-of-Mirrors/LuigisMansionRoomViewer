@@ -4,7 +4,7 @@ using OpenTK;
 using WindEditor;
 using GameFormatReader.Common;
 
-namespace BinModel.src
+namespace BinModel.src.Model
 {
     public sealed class MeshVertexHolder
     {
@@ -77,6 +77,8 @@ namespace BinModel.src
                     if (dataLength == 0)
                         dataLength = matDataOffset - DataOffsets[i];
                 }
+                // If the last offset isn't 0, which might not be often, we'll use the material data's offset to calculate
+                // the dataLength
                 else
                 {
                     dataLength = matDataOffset - DataOffsets[i];
