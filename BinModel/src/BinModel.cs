@@ -14,6 +14,7 @@ namespace BinModel.src
         public string Name;
 
         public TexBlock Textures;
+        public VertexAttribBlock VertexData;
 
         /// <summary>
         /// Loads a .bin model from file.
@@ -52,6 +53,7 @@ namespace BinModel.src
 
             Textures = new TexBlock(reader);
             Textures.GetTextureSettings(reader);
+            VertexData = new VertexAttribBlock(reader);
         }
 
         public override string ToString()

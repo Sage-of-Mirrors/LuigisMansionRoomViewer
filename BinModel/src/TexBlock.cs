@@ -39,7 +39,7 @@ namespace BinModel.src
             GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, imageData.Width, imageData.Height, 0, PixelFormat.Bgra, PixelType.UnsignedByte, imageData.GetData());
 
             // Generate Mip Maps
-            //if (imageData.MipMapCount > 0)
+            if (imageData.MipMapCount > 0)
                 GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
         }
 
@@ -126,7 +126,7 @@ namespace BinModel.src
             // Get the offset of the TexBlock, get the offset of the next section, save the reader's current offset,
             // then go to the TextureSettings section
             int offset = reader.ReadInt32();
-            int nextSectionOffset = reader.ReadInt32();
+            int nextSectionOffset = reader.PeekReadInt32();
             long curOffset = reader.BaseStream.Position;
             reader.BaseStream.Seek(offset, System.IO.SeekOrigin.Begin);
 
