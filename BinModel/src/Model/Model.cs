@@ -13,7 +13,7 @@ namespace BinModel.src.Model
         public byte Version;
         public string Name;
 
-        public TexBlock Textures;
+        public TexBlock TextureData;
         public VertexAttribBlock VertexData;
         public MaterialBlock MaterialData;
 
@@ -52,9 +52,11 @@ namespace BinModel.src.Model
             Name = new string(reader.ReadChars(11));
             Name = Name.Trim('\0');
 
-            Textures = new TexBlock(reader);
-            Textures.GetTextureSettings(reader);
+            TextureData = new TexBlock(reader);
+            TextureData.GetTextureSettings(reader);
             VertexData = new VertexAttribBlock(reader);
+            MaterialData = new MaterialBlock(reader);
+            MaterialData.GetMaterialTextures(TextureData);
         }
 
         public override string ToString()
@@ -71,7 +73,7 @@ namespace BinModel.src.Model
             {
                 if (disposing)
                 {
-                    foreach (Texture tex in Textures.Textures)
+                    foreach (Texture tex in TextureData.Textures)
                         tex.Dispose();
                 }
 

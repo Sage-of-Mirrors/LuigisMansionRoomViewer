@@ -29,6 +29,12 @@ namespace BinModel.src.Model
             }
 
             reader.BaseStream.Seek(curOffset, System.IO.SeekOrigin.Begin);
+          }
+
+        public void GetMaterialTextures(TexBlock texBlock)
+        {
+            foreach (Material mat in MaterialList)
+                mat.GetTextures(texBlock);
         }
     }
 }
