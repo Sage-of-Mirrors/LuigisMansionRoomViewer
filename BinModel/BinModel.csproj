@@ -55,6 +55,7 @@
     <Compile Include="src\Model\Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\GXToOpenGL.cs" />
+    <Compile Include="src\Model\ShapeBlock.cs" />
     <Compile Include="src\Model\TexBlock.cs" />
     <Compile Include="src\Model\VertexAttribBlock.cs" />
   </ItemGroup>
